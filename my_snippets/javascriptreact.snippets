@@ -1,0 +1,46 @@
+
+snippet efn "create a react component" b
+const ${1:functionName} = () => {
+	${2}
+return (
+	<>
+	${3:component}
+	</>
+
+);
+}
+export default $1;
+endsnippet
+
+
+snippet ius "import useState" b
+import { useState } from 'react';
+endsnippet
+
+snippet uS "useState" b
+	const [ $1, set$1 ] = useState($2);
+endsnippet
+
+snippet uE "useEffect" b
+useEffect(() => {
+	$1
+
+	return () => {
+	$2
+	}
+}, [$3]);
+endsnippet
+
+snippet fn "create a function" b
+function ${1:functionName}(${2:arguments}) {
+	${3:code}
+}
+endsnippet
+
+snippet cl "console log" b
+console.log($1);
+endsnippet
+
+snippet a "arrow function" 
+($1) => {$2}
+endsnippet

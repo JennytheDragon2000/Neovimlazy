@@ -1,0 +1,238 @@
+snippet main "Main method"
+public static void main(String[] args) {
+	${1:// TODO: Add your code here}
+}
+endsnippet
+
+snippet class "Class definition"
+public class ${1:ClassName} {
+	${2:// TODO: Add class content}
+}
+endsnippet
+
+snippet interface "Interface definition"
+public interface ${1:InterfaceName} {
+	${2:// TODO: Add interface methods}
+}
+endsnippet
+
+snippet method "Method definition"
+${1:public} ${2:void} ${3:methodName}(${4:}) {
+	${5:// TODO: Add method implementation}
+}
+endsnippet
+
+snippet constructor "Constructor"
+public ${1:ClassName}(${2:}) {
+	${3:// TODO: Add constructor implementation}
+}
+endsnippet
+
+snippet get "Getter method"
+public ${1:Type} get${2:Property}() {
+	return ${3:property};
+}
+endsnippet
+
+snippet set "Setter method"
+public void set${1:Property}(${2:Type} ${3:property}) {
+	this.${4:property} = ${5:property};
+}
+endsnippet
+
+snippet for "For loop"
+for (${1:int} ${2:i} = ${3:0}; ${4:i} < ${5:length}; ${6:i}++) {
+	${7:// TODO: Add loop body}
+}
+endsnippet
+
+snippet foreach "Enhanced for loop"
+for (${1:Type} ${2:item} : ${3:collection}) {
+	${4:// TODO: Add loop body}
+}
+endsnippet
+
+snippet if "If statement"
+if (${1:condition}) {
+	${2:// TODO: Add if body}
+}
+endsnippet
+
+snippet ifelse "If-else statement"
+if (${1:condition}) {
+	${2:// TODO: Add if body}
+} else {
+	${3:// TODO: Add else body}
+}
+endsnippet
+
+snippet try "Try-catch block"
+try {
+	${1:// TODO: Add try body}
+} catch (${2:Exception} ${3:e}) {
+	${4:// TODO: Handle exception}
+}
+endsnippet
+
+snippet tryfinally "Try-catch-finally block"
+try {
+	${1:// TODO: Add try body}
+} catch (${2:Exception} ${3:e}) {
+	${4:// TODO: Handle exception}
+} finally {
+	${5:// TODO: Add finally body}
+}
+endsnippet
+
+snippet test "JUnit test method"
+@Test
+public void ${1:testName}() {
+	${2:// TODO: Add test implementation}
+}
+endsnippet
+
+snippet before "JUnit before method"
+@BeforeEach
+public void ${1:setUp}() {
+	${2:// TODO: Add setup code}
+}
+endsnippet
+
+snippet after "JUnit after method"
+@AfterEach
+public void ${1:tearDown}() {
+	${2:// TODO: Add teardown code}
+}
+endsnippet
+
+snippet assert "Assert statement"
+assertEquals(${1:expected}, ${2:actual});
+endsnippet
+
+snippet assertnull "Assert null"
+assertNull(${1:actual});
+endsnippet
+
+snippet assertnotnull "Assert not null"
+assertNotNull(${1:actual});
+endsnippet
+
+snippet assertTrue "Assert true"
+assertTrue(${1:condition});
+endsnippet
+
+snippet assertFalse "Assert false"
+assertFalse(${1:condition});
+endsnippet
+
+snippet spring "Spring component"
+@Component
+public class ${1:ComponentName} {
+	${2:// TODO: Add component implementation}
+}
+endsnippet
+
+snippet controller "Spring controller"
+@RestController
+@RequestMapping("${1:/api}")
+public class ${2:ControllerName} {
+	${3:// TODO: Add controller methods}
+}
+endsnippet
+
+snippet service "Spring service"
+@Service
+public class ${1:ServiceName} {
+	${2:// TODO: Add service implementation}
+}
+endsnippet
+
+snippet repository "Spring repository"
+@Repository
+public class ${1:RepositoryName} {
+	${2:// TODO: Add repository implementation}
+}
+endsnippet
+
+snippet autowired "Autowired field"
+@Autowired
+private ${1:Type} ${2:fieldName};
+endsnippet
+
+snippet getmapping "Spring GET mapping"
+@GetMapping("${1:/path}")
+public ${2:ResponseEntity<String>} ${3:methodName}(${4:}) {
+	${5:// TODO: Add method implementation}
+	return ResponseEntity.ok(${6:"response"});
+}
+endsnippet
+
+snippet postmapping "Spring POST mapping"
+@PostMapping("${1:/path}")
+public ${2:ResponseEntity<String>} ${3:methodName}(@RequestBody ${4:Object} ${5:request}) {
+	${6:// TODO: Add method implementation}
+	return ResponseEntity.ok(${7:"response"});
+}
+endsnippet
+
+snippet putmapping "Spring PUT mapping"
+@PutMapping("${1:/path}")
+public ${2:ResponseEntity<String>} ${3:methodName}(@RequestBody ${4:Object} ${5:request}) {
+	${6:// TODO: Add method implementation}
+	return ResponseEntity.ok(${7:"response"});
+}
+endsnippet
+
+snippet deletemapping "Spring DELETE mapping"
+@DeleteMapping("${1:/path}")
+public ${2:ResponseEntity<String>} ${3:methodName}(${4:}) {
+	${5:// TODO: Add method implementation}
+	return ResponseEntity.ok(${6:"response"});
+}
+endsnippet
+
+snippet log "Logger declaration"
+private static final Logger ${1:logger} = LoggerFactory.getLogger(${2:ClassName}.class);
+endsnippet
+
+snippet loginfo "Log info"
+${1:logger}.info("${2:message}");
+endsnippet
+
+snippet logdebug "Log debug"
+${1:logger}.debug("${2:message}");
+endsnippet
+
+snippet logerror "Log error"
+${1:logger}.error("${2:message}", ${3:exception});
+endsnippet
+
+snippet override "Override annotation"
+@Override
+${1:public void methodName() {
+	${2:// TODO: Add method implementation}
+}}
+endsnippet
+
+snippet deprecated "Deprecated annotation"
+@Deprecated
+${1:public void methodName() {
+	${2:// TODO: Add method implementation}
+}}
+endsnippet
+
+snippet todo "TODO comment"
+// TODO: ${1:Add description}
+endsnippet
+
+snippet fixme "FIXME comment"
+// FIXME: ${1:Add description}
+endsnippet
+
+snippet sout "System.out.println"
+System.out.println(${1:"message"});
+endsnippet
+
+snippet serr "System.err.println"
+System.err.println(${1:"error message"});
+endsnippet
