@@ -16,7 +16,7 @@ return {
           suggestions = 20,
         },
       },
-      window = {
+      win = {
         border = "rounded",
         position = "bottom",
         margin = { 1, 0, 1, 0 },
@@ -24,19 +24,19 @@ return {
       },
     })
     
-    -- Register key groups for better organization
-    wk.register({
-      ["<leader>f"] = { name = "Find/Telescope" },
-      ["<leader>g"] = { name = "Git" },
-      ["<leader>h"] = { name = "Git Hunks" },
-      ["<leader>l"] = { name = "LSP" },
-      ["<leader>s"] = { name = "Split/Session" },
-      ["<leader>t"] = { name = "Toggle/Terminal" },
-      ["<leader>x"] = { name = "Trouble/Diagnostics" },
-      ["<leader>b"] = { name = "Buffer" },
-      ["<leader>r"] = { name = "Replace/Rename" },
-      ["<leader>c"] = { name = "Code/ChatGPT" },
-      ["<leader>j"] = { name = "Java" },
+    -- Register key groups using new spec format
+    wk.add({
+      { "<leader>b", group = "Buffer" },
+      { "<leader>c", group = "Code/ChatGPT" },
+      { "<leader>f", group = "Find/Telescope" },
+      { "<leader>g", group = "Git" },
+      { "<leader>h", group = "Git Hunks" },
+      { "<leader>j", group = "Java" },
+      { "<leader>l", group = "LSP" },
+      { "<leader>r", group = "Replace/Rename" },
+      { "<leader>s", group = "Split/Session" },
+      { "<leader>t", group = "Toggle/Terminal" },
+      { "<leader>x", group = "Trouble/Diagnostics" },
     })
   end,
 }
