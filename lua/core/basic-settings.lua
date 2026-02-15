@@ -12,6 +12,38 @@ set.backup = false
 -- allow to have bufferes in the background without saving it
 set.hidden = true
 
+-- auto-reload files changed outside of neovim
+set.autoread = true
+local reload_group = vim.api.nvim_create_augroup("AutoReload", { clear = true })
+vim.api.nvim_create_autocmd("BufReadPost", {
+  group = reload_group,
+  callback = function(args)
+    local bufnr = args.buf
+    local file = vim.api.nvim_buf_get_name(bufnr)
+    if file == "" or not vim.uv.fs_stat(file) then return end
+
+    local w = vim.uv.new_fs_event()
+    local function watch()
+      w:start(file, {}, vim.schedule_wrap(function()
+        w:stop()
+        if vim.api.nvim_buf_is_valid(bufnr) and vim.uv.fs_stat(file) then
+          vim.api.nvim_buf_call(bufnr, function()
+            vim.cmd("silent! edit!")
+          end)
+          watch()
+        end
+      end))
+    end
+    watch()
+
+    vim.api.nvim_create_autocmd("BufDelete", {
+      buffer = bufnr,
+      once = true,
+      callback = function() w:stop() end,
+    })
+  end,
+})
+
 
 -- copy to clipboard
 vim.opt.clipboard:append("unnamedplus")

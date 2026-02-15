@@ -118,6 +118,7 @@ map("x", "<Leader>rssl", "<Plug>RSendSelection")
 -- exit the terminal mode
 -- map("t", "<Leader>jj", "<C-\\><C-n>")
 map("t", "qq", "<C-\\><C-n>")
+map("t", "<Esc>", "<C-\\><C-n>")
 
 -- hatgpt
 
