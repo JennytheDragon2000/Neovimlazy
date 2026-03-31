@@ -24,8 +24,8 @@ map("n", "<leader>l", ":Lazy<CR>")
 map("n", "<C-u>", "<C-u>zz")
 map("n", "<C-d>", "<C-d>zz")
 
-map("n", "<M-j>", "<cmd>cnext<CR>")
-map("n", "<M-k>", "<cmd>cprev<CR>")
+map("n", "<M-j>", "<cmd>silent! cnext<CR>")
+map("n", "<M-k>", "<cmd>silent! cprev<CR>")
 
 -- splits
 map("n", "<leader>sv", "<C-w>v") -- split vertically
